@@ -4,64 +4,126 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sonamoni Kobita</title>
-
-<!-- Google AdSense CODE - Apnar ID bosano ache -->
+<meta name="theme-color" content="#ff4081">
+<title>Sonamoni - Full Offline</title>
+<link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiU29uYW1vbmkiLCJzaG9ydF9uYW1lIjoiU29uYW1vbmkiLCJzdGFydF91cmwiOiIuIiwiZGlzcGxheSI6InN0YW5kYWxvbmUiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZjhmMCIsInRoZW1lX2NvbG9yIjoiI2ZmNDA4MSJ9">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8581301141695930" crossorigin="anonymous"></script>
-
 <style>
-body{font-family: 'Noto Sans Bengali', sans-serif; background:#fff0f5; margin:0; padding:0; text-align:center;}
-.header{background:#ff4081; color:white; padding:15px; font-size:22px; font-weight:bold;}
-.poem-card{background:white; margin:15px; padding:20px; border-radius:15px; box-shadow:0 2px 8px rgba(0,0,0,0.1);}
-.ad-box{margin:15px 0; background:#fff; padding:5px; border:1px dashed #ff4081;}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:system-ui,'Noto Sans Bengali';background:#fff7f0}
+header{background:#ff4081;color:#fff;padding:14px;text-align:center;font-size:24px;font-weight:900;position:sticky;top:0;z-index:20}
+.tabs{display:flex;gap:6px;overflow:auto;padding:8px;background:#fff;position:sticky;top:56px;z-index:10}
+.tabs button{white-space:nowrap;border:none;background:#ffe3ec;padding:8px 14px;border-radius:20px;font-weight:700}
+.tabs button.on{background:#ff4081;color:#fff}
+.sec{margin:10px;background:#fff;border-radius:16px;padding:12px;box-shadow:0 2px 10px #0001}
+h2{color:#ff4081;border-left:5px solid #ff4081;padding-left:8px;margin:8px 0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+@media(min-width:600px){.grid{grid-template-columns:repeat(4,1fr)}}
+.item{background:linear-gradient(135deg,#fff0f5,#ffecf2);border:2px solid #ffc2d6;border-radius:14px;padding:12px;text-align:center;font-size:20px;font-weight:700;cursor:pointer}
+.item:active{transform:scale(.96)}
+.item small{display:block;font-size:13px;color:#555;margin-top:4px;font-weight:400}
+.poem{text-align:left;background:#fffbe6;padding:10px;margin:8px 0;border-radius:10px;border-left:4px solid #ffca28;line-height:1.7}
+.sura{text-align:center;background:#e8f5e9;padding:12px;margin:8px 0;border-radius:10px}
+.sura .ar{font-size:22px;color:#1b5e20}
+.ad{margin:12px;background:#fff;border:1px dashed #ff4081;border-radius:12px;padding:4px}
 </style>
 </head>
 <body>
-
-<div class="header">🌸 Sonamoni Kobita 🌸</div>
-
-<!-- UPORE ADD -->
-<div class="ad-box">
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8581301141695930"
-     data-ad-slot="1234567890"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<header>🌸 সোনামণি - সব শিখি 🌸<br><small style="font-size:12px">Sound + Offline + Add</small></header>
+<div class="tabs">
+<button class="on" onclick="show('abc')">ABCD</button>
+<button onclick="show('bn')">অ-আ</button>
+<button onclick="show('num')">১২৩</button>
+<button onclick="show('arbi')">আরবি</button>
+<button onclick="show('ful')">ফুল ১০</button>
+<button onclick="show('fol')">ফল ১০</button>
+<button onclick="show('posu')">পশু ১০</button>
+<button onclick="show('pakhi')">পাখি ১০</button>
+<button onclick="show('kobita')">কবিতা ১৫</button>
+<button onclick="show('sura')">সুরা ১০</button>
 </div>
 
-<div class="poem-card">
-<h2>Amar Sonamoni</h2>
-<p>Tumi amar sokal bela,<br> Tumi amar sadh...</p>
-</div>
+<div class="ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8581301141695930" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
 
-<!-- MAJHE ADD -->
-<div class="ad-box">
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8581301141695930"
-     data-ad-slot="1234567890"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
+<div id="abc" class="sec"><h2>ABCD Full - Sound er jonno click koro</h2><div class="grid" id="gabc"></div></div>
+<div id="bn" class="sec"><h2>অ আ ক খ Full</h2><div class="grid" id="gbn"></div></div>
+<div id="num" class="sec"><h2>১-১০০ + 1-100 Full</h2><div class="grid" id="gnum"></div></div>
+<div id="arbi" class="sec"><h2>আরবি ২৯ হরফ Full</h2><div class="grid" id="garbi"></div></div>
 
-<div class="poem-card">
-<h2>Mayer Ador</h2>
-<p>Sonamoni sona pakhi...<br> Apnar sob kobita ekhane asbe</p>
-</div>
+<div class="ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8581301141695930" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
 
-<!-- NICHER ADD -->
-<div class="ad-box">
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8581301141695930"
-     data-ad-slot="1234567890"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
+<div id="ful" class="sec"><h2>ফুল ১০ টি Full</h2><div class="grid" id="gful"></div></div>
+<div id="fol" class="sec"><h2>ফল ১০ টি Full</h2><div class="grid" id="gfol"></div></div>
+<div id="posu" class="sec"><h2>পশু ১০ টি Full</h2><div class="grid" id="gposu"></div></div>
+<div id="pakhi" class="sec"><h2>পাখি ১০ টি Full</h2><div class="grid" id="gpakhi"></div></div>
 
+<div class="ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8581301141695930" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+<div id="kobita" class="sec"><h2>কবিতা ১৫ টি Full</h2><div id="gkobita"></div></div>
+<div id="sura" class="sec"><h2>ছোট সুরা ১০ টি Full</h2><div id="gsura"></div></div>
+
+<div class="ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8581301141695930" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+<script>
+// Sound Function - Online/Offline
+function speak(t){ if('speechSynthesis' in window){ let u=new SpeechSynthesisUtterance(t); u.lang='bn-BD'; u.rate=0.9; speechSynthesis.speak(u);} }
+function show(id){ document.getElementById(id).scrollIntoView({behavior:'smooth'}); }
+
+// DATA FULL
+const abc = [['A','Apple'],['B','Ball'],['C','Cat'],['D','Dog'],['E','Egg'],['F','Fish'],['G','Goat'],['H','Hen'],['I','Ice'],['J','Jug'],['K','Kite'],['L','Lion'],['M','Mango'],['N','Nest'],['O','Orange'],['P','Parrot'],['Q','Queen'],['R','Rose'],['S','Sun'],['T','Tiger'],['U','Umbrella'],['V','Van'],['W','Watch'],['X','Xylophone'],['Y','Yak'],['Z','Zebra']];
+const bn = ['অ-অজগর','আ-আম','ই-ইলিশ','ঈ-ঈগল','উ-উট','ঊ-ঊষা','ঋ-ঋষি','এ-একতারা','ঐ-ঐরাবত','ও-ওল','ঔ-ঔষধ','ক-কলা','খ-খাতা','গ-গরু','ঘ-ঘোড়া','ঙ-ব্যাঙ','চ-চশমা','ছ-ছাতা','জ-জাহাজ','ঝ-ঝর্ণা','ঞ-মিঞা','ট-টমেটো','ঠ-ঠোঙ্গা','ড-ডাব','ঢ-ঢোল','ণ-হরিণ','ত-তরমুজ','থ-থালা','দ-দোয়েল','ধ-ধান','ন-নৌকা','প-পাখি','ফ-ফুল','ব-বই','ভ-ভালুক','ম-মাছ','য-যাতা','র-রথ','ল-লেবু','শ-শাপলা','ষ-ষাঁড়','স-সিংহ','হ-হাতি','ড়-গাড়ি','ঢ়-আষাঢ়','য়-খেলা','ৎ-হঠাৎ'];
+const ful = [['🌹','গোলাপ','Golap'],['🌷','গাঁদা','Gada'],['🌸','বেলি','Beli'],['🌺','জবা','Joba'],['🌻','সূর্যমুখী','Surjomukhi'],['💮','শাপলা','Shapla'],['🪷','পদ্ম','Poddo'],['🌼','হাসনাহেনা','Hasnahena'],['🌷','টিউলিপ','Tulip'],['🥀','রজনীগন্ধা','Rojonigondha']];
+const fol = [['🍎','আপেল','Apple'],['🍌','কলা','Kola'],['🥭','আম','Aam'],['🍇','আঙুর','Angur'],['🍓','স্ট্রবেরি','Strawberry'],['🍊','কমলা','Komla'],['🍉','তরমুজ','Tormuj'],['🍍','আনারস','Anaros'],['🥥','নারিকেল','Narikel'],['🍐','পেয়ারা','Peyara']];
+const posu = [['🦁','সিংহ','Lion'],['🐯','বাঘ','Tiger'],['🐘','হাতি','Elephant'],['🐄','গরু','Cow'],['🐐','ছাগল','Goat'],['🐈','বিড়াল','Cat'],['🐕','কুকুর','Dog'],['🐒','বানর','Monkey'],['🐴','ঘোড়া','Horse'],['🐰','খরগোশ','Rabbit']];
+const pakhi = [['🦜','তোতা','Parrot'],['🦚','ময়ূর','Peacock'],['🐦','দোয়েল','Doel'],['🐓','মুরগি','Hen'],['🦆','হাঁস','Duck'],['🦅','ঈগল','Eagle'],['🕊️','কবুতর','Pigeon'],['🦉','পেঁচা','Owl'],['🐧','পেঙ্গুইন','Penguin'],['🦢','রাজহাঁস','Swan']];
+const kobita = [
+"আয় আয় চাঁদ মামা টিপ দিয়ে যা\nচাঁদের কপালে চাঁদ টিপ দিয়ে যা",
+"হাট্টিমাটিম টিম তারা মাঠে পাড়ে ডিম তাদের খাড়া দুটো শিং তারা হাট্টিমাটিম টিম",
+"খোকন খোকন ডাক পাড়ি খোকন মোদের কার বাড়ি আয়রে খোকন ঘরে আয় দুধ মাখা ভাত কাকে খায়",
+"ভোর হলো দোর খোলো খুকুমণি ওঠো রে ওই ডাকে জুঁই শাখে ফুল খুকি ছোটো রে",
+"টুইংকেল টুইংকেল লিটল স্টার হাউ আই ওয়ান্ডার হোয়াট ইউ আর",
+"আমাদের দেশটা স্বপ্নপুরী সাথী মোদের ফুলপরী ফুলপরী লালপরী লালপরী নীলপরী",
+"আম পাতা জোড়া জোড়া মারবো চাবুক চড়বো ঘোড়া ওরে বুবু সরে দাঁড়া",
+"প্রজাপতি প্রজাপতি কোথায় পেলে ভাই এমন রঙিন পাখা",
+"মা গো আমায় ছুটি দিতে বল সকাল থেকে পড়েছি যে মেলা",
+"আমার সোনার বাংলা আমি তোমায় ভালোবাসি",
+"নোটন নোটন পায়রাগুলি ঝোটন বেঁধেছে",
+"আয়রে আয় টিয়ে নায়ে ভরা দিয়ে",
+"দিনের আলো নিভে এলো সুয্যি ডোবে ডোবে",
+"বাবুরাম সাপুড়ে কোথা যাস বাপুরে আয় বাবা দেখে যা দুটো সাপ রেখে যা",
+"ছোট্ট সোনামণি তুমি সোনার খনি তোমায় নিয়ে স্বপ্ন দেখি দিবস রজনী"
+];
+const sura = [
+["সুরা ফাতিহা","بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...","সব প্রশংসা আল্লাহর"],
+["সুরা ইখলাস","قُلْ هُوَ اللَّهُ أَحَدٌ اللَّهُ الصَّمَدُ لَمْ يَلِدْ وَلَمْ يُولَدْ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ","বলুন আল্লাহ এক"],
+["সুরা ফালাক","قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ مِن شَرِّ مَا خَلَقَ","বলুন আশ্রয় চাই প্রভাতের রবের"],
+["সুরা নাস","قُلْ أَعُوذُ بِرَبِّ النَّاسِ مَلِكِ النَّاسِ إِلَٰهِ النَّاسِ","আশ্রয় চাই মানুষের রবের"],
+["সুরা কাওসার","إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ فَصَلِّ لِرَبِّكَ وَانْحَرْ","আমি তোমাকে কাওসার দিয়েছি"],
+["সুরা আসর","وَالْعَصْرِ إِنَّ الْإِنسَانَ لَفِي خُسْرٍ","সময়ের শপথ মানুষ ক্ষতিতে"],
+["সুরা ফীল","أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ","তুমি কি দেখনি হাতি ওয়ালাদের"],
+["সুরা কুরাইশ","لِإِيلَافِ قُرَيْشٍ إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ","কুরাইশের আসক্তির জন্য"],
+["সুরা মাউন","أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ","তুমি কি দেখেছো যে বিচার দিবসকে মিথ্যা বলে"],
+["সুরা নসর","إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ","যখন আল্লাহর সাহায্য আসবে"]
+];
+
+function render(){
+ let h=''; abc.forEach(a=>{h+=`<div class="item" onclick="speak('${a[0]} for ${a[1]}')">${a[0]}<small>${a[0].toLowerCase()} - ${a[1]}</small></div>`}); document.getElementById('gabc').innerHTML=h;
+ h=''; bn.forEach(b=>{h+=`<div class="item" onclick="speak('${b}')">${b.split('-')[0]}<small>${b}</small></div>`}); document.getElementById('gbn').innerHTML=h;
+ h=''; for(let i=1;i<=100;i++){h+=`<div class="item" onclick="speak('${i}')">${i}<small>${i<=10?['এক','দুই','তিন','চার','পাঁচ','ছয়','সাত','আট','নয়','দশ'][i-1]:i}</small></div>`} document.getElementById('gnum').innerHTML=h;
+ h=''; ['আলিফ ا','বা ب','তা ت','ছা ث','জীম ج','হা ح','খা خ','দাল د','যাল ذ','র র','যা ز','সীন س','শীন ش','ছোয়াদ ص','দোয়াদ ض','তোয়া ط','যোয়া ظ','আইন ع','গাইন غ','ফা ف','ক্বফ ق','কাফ ك','লাম ل','মীম م','নুন ن','ওয়াও و','হা ه','হামযা ء','ইয়া ي'].forEach(a=>{h+=`<div class="item" onclick="speak('${a}')">${a}</div>`}); document.getElementById('garbi').innerHTML=h;
+ h=''; ful.forEach(f=>{h+=`<div class="item" onclick="speak('${f[1]}')">${f[0]}<small>${f[1]}<br>${f[2]}</small></div>`}); document.getElementById('gful').innerHTML=h;
+ h=''; fol.forEach(f=>{h+=`<div class="item" onclick="speak('${f[1]}')">${f[0]}<small>${f[1]}</small></div>`}); document.getElementById('gfol').innerHTML=h;
+ h=''; posu.forEach(f=>{h+=`<div class="item" onclick="speak('${f[1]}')">${f[0]}<small>${f[1]}</small></div>`}); document.getElementById('gposu').innerHTML=h;
+ h=''; pakhi.forEach(f=>{h+=`<div class="item" onclick="speak('${f[1]}')">${f[0]}<small>${f[1]}</small></div>`}); document.getElementById('gpakhi').innerHTML=h;
+ h=''; kobita.forEach((k,i)=>{h+=`<div class="poem" onclick="speak(\`${k}\`)"><b>${i+1}. কবিতা - Click করে শুনো</b><br>${k.replace(/\n/g,'<br>')}</div>`}); document.getElementById('gkobita').innerHTML=h;
+ h=''; sura.forEach((s,i)=>{h+=`<div class="sura" onclick="speak('${s[0]}')"><b>${i+1}. ${s[0]}</b><div class="ar">${s[1]}</div><small>${s[2]}</small></div>`}); document.getElementById('gsura').innerHTML=h;
+}
+render();
+
+// Offline Service Worker
+if('serviceWorker' in navigator){
+ navigator.serviceWorker.register(URL.createObjectURL(new Blob([`self.addEventListener('install',e=>{e.waitUntil(caches.open('sonamoni-v3').then(c=>c.addAll(['./'])))});self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)))})`],{type:'text/javascript'})))
+}
+</script>
 </body>
 </html>
+
