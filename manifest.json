@@ -1,0 +1,11 @@
+
+{
+  "name": "সোনামণি - কবিতা সূরা পাখির জগৎ",
+  "short_name": "সোনামণি",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff7ed",
+  "theme_color": "#ec4899",
+  "lang": "bn",
+  "icons": [{ "src": "https://cdn-icons-png.flaticon.com/512/3602/3602145.png", "sizes": "512x512", "type": "image/png" }]
+}
